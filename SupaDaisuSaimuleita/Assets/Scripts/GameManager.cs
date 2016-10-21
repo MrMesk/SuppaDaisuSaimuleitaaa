@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 
-    List<Phase> phaseQueue;
+    public List<Phase> phaseQueue = new List<Phase>();
 
-    Phase currentPhase;
+    private Phase currentPhase;
 
     public void Start() {
         if(phaseQueue.Count > 0) {

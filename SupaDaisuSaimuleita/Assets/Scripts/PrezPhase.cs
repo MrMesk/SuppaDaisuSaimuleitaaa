@@ -5,7 +5,12 @@ public class PrezPhase : Phase
 {
 	public override void BeginPhase ()
 	{
-		
-		throw new System.NotImplementedException ();
+        EndPhase();
+        StartCoroutine(Dada());
 	}
+
+    IEnumerator Dada() {
+        yield return new WaitForSeconds(5);
+        EndPhase();
+    }
 }

@@ -8,7 +8,7 @@ public abstract class Phase : MonoBehaviour
 
 	public abstract void BeginPhase ();
 
-    private void EndPhase()
+    protected void EndPhase()
 	{
 		ePhaseEnd (this);
 	}
