@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class Phase 
+public abstract class Phase : MonoBehaviour
 {
-	delegate void PhaseEnd();
-	PhaseEnd ePhaseEnd;
+    public delegate void PhaseEnd(Phase me);
+	public PhaseEnd ePhaseEnd;
 
 	public abstract void BeginPhase ();
 
-	void EndPhase()
+    private void EndPhase()
 	{
-		ePhaseEnd ();
+		ePhaseEnd (this);
 	}
 }
